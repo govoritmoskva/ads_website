@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ current_rubric.name }} - Доска объявлений</title>
+    </head>
+    <body>
+        <h1>Объявления</h1>
+        <h2>Рубрика: {{ current_rubric.name }}</h2>
+        <div>
+            <a href="{% url 'index' %}">Главная</a>
+            <a href="{% url 'add' %}">Добавить</a>
+            {% for rubric in rubrics %}
+            <a href="{% url 'rubric_bbs' rubric.pk %}">{{ rubric.name }}</a>
+            {% endfor %}
+        </div>
+        {% for bb in bbs %}
+        <div>
+            <h2>{{ bb.title }}</h2>
+            <p>{{ bb.content }}</p>
+            <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
+
+        </div>
+        {% endfor %}
+    </body>
+</html>
