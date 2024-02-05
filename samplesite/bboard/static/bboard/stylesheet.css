@@ -1,7 +1,20 @@
+@font-face {
+    font-family: 'Yandex Sans Text';
+    src: url('YandexSansText-Medium.eot');
+    src: local('Yandex Sans Text Medium'), local('YandexSansText-Medium'),
+        url('YandexSansText-Medium.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Medium.woff2') format('woff2'),
+        url('YandexSansText-Medium.woff') format('woff'),
+        url('YandexSansText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 header h1 {
     font-size: 40pt;
-    text-transform: uppercase;
     text-align: center;
+    font-family: 'Yandex Sans Text';
+
 }
 
 nav {
